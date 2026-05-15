@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { RequesterSidebar } from "./RequesterSidebar";
 import { RequesterTopBar } from "./RequesterTopBar";
+import { SubmitEnquiryDialog } from "./SubmitEnquiryDialog";
 
 export function RequesterShell({ children }: { children: ReactNode }) {
   return (
@@ -16,6 +17,7 @@ export function RequesterShell({ children }: { children: ReactNode }) {
             </main>
           </div>
         </div>
+        <SubmitEnquiryDialog />
       </div>
     </SidebarProvider>
   );

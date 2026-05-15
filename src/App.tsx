@@ -10,6 +10,7 @@ import Approvals from "./pages/Approvals.tsx";
 import Reports from "./pages/Reports.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import RequesterDashboard from "./pages/requester/Dashboard.tsx";
+import RequesterBrowse from "./pages/requester/Browse.tsx";
 import RequesterBookings from "./pages/requester/Bookings.tsx";
 import RequesterEnquiries from "./pages/requester/Enquiries.tsx";
 import RequesterWishlist from "./pages/requester/Wishlist.tsx";
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/approvals" element={<Approvals />} />
           <Route path="/reports" element={<Reports />} />
           <Route path="/requester" element={<RequesterDashboard />} />
+          <Route path="/requester/browse" element={<RequesterBrowse />} />
           <Route path="/requester/bookings" element={<RequesterBookings />} />
           <Route path="/requester/enquiries" element={<RequesterEnquiries />} />
           <Route path="/requester/wishlist" element={<RequesterWishlist />} />
