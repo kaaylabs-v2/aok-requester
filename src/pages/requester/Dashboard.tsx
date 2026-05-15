@@ -16,6 +16,7 @@ import { EnquiryDrawer } from "@/components/requester/EnquiryDrawer";
 import { EntitlementWidget } from "@/components/requester/EntitlementWidget";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
+import { openEnquiry as openEnquiryDialog } from "@/components/requester/SubmitEnquiryDialog";
 
 export default function RequesterDashboard() {
   const [scope, setScope] = useState<"upcoming" | "past">("upcoming");
@@ -58,7 +59,7 @@ export default function RequesterDashboard() {
               <Heart className="mr-1.5 h-4 w-4" /> Wishlist
               <Badge className="ml-2 h-5 bg-primary text-primary-foreground">{requesterWishlist.length}</Badge>
             </Button>
-            <Button size="sm" className="rounded-full bg-foreground text-background hover:bg-foreground/90 sm:size-default">
+            <Button size="sm" className="rounded-full bg-foreground text-background hover:bg-foreground/90 sm:size-default" onClick={openEnquiryDialog}>
               <Plus className="mr-1.5 h-4 w-4" /> New Enquiry
             </Button>
           </div>
