@@ -15,6 +15,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { requesterProfile } from "@/data/requester";
 import { cn } from "@/lib/utils";
+import { openEnquiry } from "./SubmitEnquiryDialog";
 
 const sampleNotifs = [
   { id: "rn1", title: "Booking confirmed", body: "BKG-2041 — Quarterly Leadership Forum", time: "2m ago", unread: true },
@@ -51,7 +52,7 @@ export function RequesterTopBar() {
             </Button>
           )}
 
-          <Button size="sm" className="hidden h-9 gap-1.5 rounded-full px-3 sm:inline-flex">
+          <Button size="sm" className="hidden h-9 gap-1.5 rounded-full px-3 sm:inline-flex" onClick={openEnquiry}>
             <Plus className="h-4 w-4" />
             <span className="text-xs font-semibold">New Enquiry</span>
           </Button>

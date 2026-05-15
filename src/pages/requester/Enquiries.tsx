@@ -9,6 +9,7 @@ import { requesterEnquiries, RequesterEnquiry, REQ_ENQUIRY_STATUS_LABEL } from "
 import { EnquiryStatusChip } from "@/components/requester/StatusChip";
 import { EnquiryDrawer } from "@/components/requester/EnquiryDrawer";
 import { cn } from "@/lib/utils";
+import { openEnquiry } from "@/components/requester/SubmitEnquiryDialog";
 
 export default function RequesterEnquiries() {
   const [query, setQuery] = useState("");
