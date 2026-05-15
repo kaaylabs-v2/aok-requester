@@ -34,7 +34,7 @@ export default function RequesterEnquiries() {
           <h1 className="font-display text-3xl font-semibold tracking-tight">Enquiries</h1>
           <p className="mt-1 text-sm text-muted-foreground">{filtered.length} enquiries · track requests and proposals.</p>
         </div>
-        <Button className="rounded-full"><Plus className="mr-1.5 h-4 w-4" /> New enquiry</Button>
+        <Button className="rounded-full" onClick={openEnquiry}><Plus className="mr-1.5 h-4 w-4" /> New enquiry</Button>
       </div>
 
       <div className="rounded-2xl border border-border/60 bg-card/90 p-3 shadow-sm sm:p-4">
