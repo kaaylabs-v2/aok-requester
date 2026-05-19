@@ -86,7 +86,7 @@ export function RequesterSidebar() {
                       asChild
                       isActive={active}
                       tooltip={item.title}
-                      className={active ? "bg-[#c93f76] text-white hover:bg-[#c93f76] hover:text-white data-[active=true]:bg-[#c93f76] data-[active=true]:text-white" : ""}
+                      className={active ? "bg-[#c93f76] text-white hover:bg-[#c93f76] hover:text-white data-[active=true]:bg-[#c93f76] data-[active=true]:text-white data-[active=true]:ring-0" : ""}
                     >
                       <NavLink to={item.url} className={`flex items-center gap-3 rounded-lg ${collapsed ? "justify-center" : ""}`}>
                         <item.icon className="h-4 w-4" />
