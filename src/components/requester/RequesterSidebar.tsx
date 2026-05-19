@@ -86,7 +86,7 @@ export function RequesterSidebar() {
                       <NavLink
                         to={item.url}
                         className={({ isActive }) =>
-                          `flex items-center gap-3 rounded-lg ${collapsed ? "justify-center" : ""} ${isActive ? "bg-primary text-primary-foreground shadow-sm" : ""}`
+                          `flex items-center gap-3 rounded-lg ${collapsed ? "justify-center" : ""} ${isActive ? "!bg-primary !text-primary-foreground shadow-sm" : ""}`
                         }
                       >
                         <item.icon className="h-4 w-4" />
