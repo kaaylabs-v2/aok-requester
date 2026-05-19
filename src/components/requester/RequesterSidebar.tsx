@@ -86,7 +86,7 @@ export function RequesterSidebar() {
                       asChild
                       isActive={active}
                       tooltip={item.title}
-                      className={active ? "bg-gradient-to-r from-primary to-primary-glow text-primary-foreground shadow-[0_8px_20px_-8px_hsl(var(--primary)/0.55)] ring-1 ring-primary/30 hover:from-primary hover:to-primary-glow hover:text-primary-foreground data-[active=true]:bg-gradient-to-r data-[active=true]:from-primary data-[active=true]:to-primary-glow data-[active=true]:text-primary-foreground" : ""}
+                      className={active ? "bg-gradient-brand text-white shadow-[0_8px_20px_-8px_hsl(var(--primary)/0.45)] ring-1 ring-white/20 hover:text-white data-[active=true]:bg-gradient-brand data-[active=true]:text-white" : ""}
                     >
                       <NavLink to={item.url} className={`flex items-center gap-3 rounded-lg ${collapsed ? "justify-center" : ""}`}>
                         <item.icon className="h-4 w-4" />
