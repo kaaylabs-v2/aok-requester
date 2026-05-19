@@ -83,7 +83,12 @@ export function RequesterSidebar() {
                 return (
                   <SidebarMenuItem key={item.title}>
                     <SidebarMenuButton asChild isActive={active} tooltip={item.title}>
-                      <NavLink to={item.url} className={`flex items-center gap-3 rounded-lg ${collapsed ? "justify-center" : ""}`}>
+                      <NavLink
+                        to={item.url}
+                        className={({ isActive }) =>
+                          `flex items-center gap-3 rounded-lg ${collapsed ? "justify-center" : ""} ${isActive ? "!bg-primary !text-primary-foreground shadow-sm" : ""}`
+                        }
+                      >
                         <item.icon className="h-4 w-4" />
                         {!collapsed && <span className="text-sm font-medium">{item.title}</span>}
                       </NavLink>
@@ -99,7 +104,12 @@ export function RequesterSidebar() {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton asChild tooltip="Log out">
-              <NavLink to="/" className={`flex items-center gap-3 rounded-lg ${collapsed ? "justify-center" : ""}`}>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `flex items-center gap-3 rounded-lg ${collapsed ? "justify-center" : ""} ${isActive ? "bg-primary text-primary-foreground shadow-sm" : ""}`
+                }
+              >
                 <LogOut className="h-4 w-4" />
                 {!collapsed && <span className="text-sm font-medium">Log out</span>}
               </NavLink>
