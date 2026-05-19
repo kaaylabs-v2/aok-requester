@@ -82,11 +82,11 @@ export function RequesterSidebar() {
                 const active = isActive(item.url, item.exact);
                 return (
                   <SidebarMenuItem key={item.title}>
-                    <SidebarMenuButton asChild isActive={active} tooltip={item.title}>
+                    <SidebarMenuButton asChild isActive={active} tooltip={item.title} className="text-sidebar-foreground/80 hover:text-primary">
                       <NavLink
                         to={item.url}
                         className={({ isActive }) =>
-                          `flex items-center gap-3 rounded-lg ${collapsed ? "justify-center" : ""} ${isActive ? "!bg-primary !text-primary-foreground shadow-sm" : ""}`
+                          `flex items-center gap-3 rounded-lg ${collapsed ? "justify-center" : ""} ${isActive ? "!bg-primary !text-primary-foreground shadow-sm" : "text-sidebar-foreground"}`
                         }
                       >
                         <item.icon className="h-4 w-4" />
@@ -103,11 +103,11 @@ export function RequesterSidebar() {
       <SidebarFooter className="p-2">
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton asChild tooltip="Log out">
+            <SidebarMenuButton asChild tooltip="Log out" className="text-sidebar-foreground/80 hover:text-primary">
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  `flex items-center gap-3 rounded-lg ${collapsed ? "justify-center" : ""} ${isActive ? "bg-primary text-primary-foreground shadow-sm" : ""}`
+                  `flex items-center gap-3 rounded-lg ${collapsed ? "justify-center" : ""} ${isActive ? "!bg-primary !text-primary-foreground shadow-sm" : "text-sidebar-foreground"}`
                 }
               >
                 <LogOut className="h-4 w-4" />
