@@ -73,24 +73,33 @@ export function RequesterSidebar() {
           </Tooltip>
         )}
       </SidebarHeader>
-      <SidebarContent className="px-2">
+      <SidebarContent className="px-3">
         <SidebarGroup>
-          <SidebarGroupLabel>Workspace</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
+          <SidebarGroupLabel className="px-2 text-[11px] uppercase tracking-wider text-sidebar-foreground/50">Workspace</SidebarGroupLabel>
+          <SidebarGroupContent className="mt-2">
+            <SidebarMenu className="gap-1.5">
               {items.map((item) => {
                 const active = isActive(item.url, item.exact);
                 return (
                   <SidebarMenuItem key={item.title}>
-                    <SidebarMenuButton asChild isActive={active} tooltip={item.title} className="text-sidebar-foreground/80 hover:text-primary">
+                    <SidebarMenuButton
+                      asChild
+                      isActive={active}
+                      tooltip={item.title}
+                      className="h-11 rounded-full px-3 text-sidebar-foreground/80 hover:bg-sidebar-accent hover:text-primary data-[active=true]:!ring-0"
+                    >
                       <NavLink
                         to={item.url}
                         className={({ isActive }) =>
-                          `flex items-center gap-3 rounded-lg ${collapsed ? "justify-center" : ""} ${isActive ? "!bg-primary !text-primary-foreground shadow-sm" : "text-sidebar-foreground"}`
+                          `flex items-center gap-3 rounded-full ${collapsed ? "justify-center" : ""} ${
+                            isActive
+                              ? "!bg-primary !text-primary-foreground shadow-[0_0_0_4px_hsl(var(--primary)/0.18)]"
+                              : "text-sidebar-foreground"
+                          }`
                         }
                       >
-                        <item.icon className="h-4 w-4" />
-                        {!collapsed && <span className="text-sm font-medium">{item.title}</span>}
+                        <item.icon className="h-[18px] w-[18px]" />
+                        {!collapsed && <span className="text-[15px] font-medium">{item.title}</span>}
                       </NavLink>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
@@ -100,18 +109,26 @@ export function RequesterSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter className="p-2">
+      <SidebarFooter className="p-3">
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton asChild tooltip="Log out" className="text-sidebar-foreground/80 hover:text-primary">
+            <SidebarMenuButton
+              asChild
+              tooltip="Log out"
+              className="h-11 rounded-full px-3 text-sidebar-foreground/80 hover:bg-sidebar-accent hover:text-primary data-[active=true]:!ring-0"
+            >
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  `flex items-center gap-3 rounded-lg ${collapsed ? "justify-center" : ""} ${isActive ? "!bg-primary !text-primary-foreground shadow-sm" : "text-sidebar-foreground"}`
+                  `flex items-center gap-3 rounded-full ${collapsed ? "justify-center" : ""} ${
+                    isActive
+                      ? "!bg-primary !text-primary-foreground shadow-[0_0_0_4px_hsl(var(--primary)/0.18)]"
+                      : "text-sidebar-foreground"
+                  }`
                 }
               >
-                <LogOut className="h-4 w-4" />
-                {!collapsed && <span className="text-sm font-medium">Log out</span>}
+                <LogOut className="h-[18px] w-[18px]" />
+                {!collapsed && <span className="text-[15px] font-medium">Log out</span>}
               </NavLink>
             </SidebarMenuButton>
           </SidebarMenuItem>
